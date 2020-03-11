@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './clock.js';
+import MyComponent from './myComponent.js';
 
 class App extends Component{
   render(){
@@ -11,6 +12,7 @@ class App extends Component{
         <img src={logo} className="App-logo" alt="logo" />
         <p className="App-intro">Hi{this.props.name}!</p>
         <Clock/>
+        <MyComponent/>
         <a
           className="App-link"
           href="https://reactjs.org"
