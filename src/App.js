@@ -1,9 +1,8 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Clock from './clock.js';
-import MyComponent from './myComponent.js';
-import ColouredBlock from './ColouredBlock.js';
+
+import Products from './Products.js';
 
 class App extends Component{
   render(){
@@ -12,9 +11,8 @@ class App extends Component{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="App-intro">Hi{this.props.name}!</p>
-        <Clock/>
-        <MyComponent/>
-        <ColouredBlock/>
+        <Products/>
+        
         <a
           className="App-link"
           href="https://reactjs.org"
