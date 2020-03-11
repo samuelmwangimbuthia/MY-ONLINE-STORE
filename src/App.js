@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Clock from './clock.js';
 import MyComponent from './myComponent.js';
+import ColouredBlock from './ColouredBlock.js';
 
 class App extends Component{
   render(){
@@ -13,6 +14,7 @@ class App extends Component{
         <p className="App-intro">Hi{this.props.name}!</p>
         <Clock/>
         <MyComponent/>
+        <ColouredBlock/>
         <a
           className="App-link"
           href="https://reactjs.org"
