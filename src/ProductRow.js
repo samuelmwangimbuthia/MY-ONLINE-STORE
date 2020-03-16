@@ -1,11 +1,12 @@
 import React from 'react';
+import './ProductRow.css';
 
 class ProductRow extends React.Component{
     render(){
         return(
             <tr>
                 <td>
-                    <span className = {this.props.product.stocked ? '' : 'ProductRow-out-of-stock'}>
+                    <span className ={this.props.product.stocked ? '' : 'ProductRow-out-of-stock'}>
                     {this.props.product.name}
                     </span>
                 </td>

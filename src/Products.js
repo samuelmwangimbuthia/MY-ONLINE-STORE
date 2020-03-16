@@ -13,12 +13,33 @@ var PRODUCTS = {
   };
 
 class Products extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleFilter = this.handleFilter.bind(this);
+        this.state={
+            filterText: '',
+            inStockOnly: false,
+            products: PRODUCTS
+        };
+    }
+    handleFilter(filterInput){
+        this.setState(filterInput);
+    }
     render(){
         return(
             <div>
-                <Filters></Filters>
-                <ProductTable products={PRODUCTS}></ProductTable>
-                <ProductForm></ProductForm>
+                <Filters 
+                filterText={this.state.filterText}
+                inStockOnly={this.state.inStockOnly}
+                />
+
+                <ProductTable
+                products={PRODUCTS}
+                filterText={this.state.filterText}
+                inStockOnly={this.state.inStockOnly}
+                />
+
+                <ProductForm/>
             </div>
         );
     }
